@@ -1,7 +1,10 @@
 class HelloWorld {
-
   public static void main(String[] args) {
     Board board = new Board();
+    board.print();
+    board.move_o(1, 2);
+    board.print();
+    board.move_x(0, 0);
     board.print();
   }
 }
@@ -12,7 +15,18 @@ class Board {
   public Board() {
     char[][] b = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
     board = b;
-    board[0][0] = 'o';
+  }
+
+  public void move_o(int i, int j) {
+    move(i, j, 'o');
+  }
+
+  public void move_x(int i, int j) {
+    move(i, j, 'x');
+  }
+
+  void move(int i, int j, char player) {
+    board[i][j] = player;
   }
 
   public void print() {
@@ -31,5 +45,6 @@ class Board {
         System.out.println("   |   |   ");
       }
     }
+    System.out.println("");
   }
 }
