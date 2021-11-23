@@ -17,16 +17,23 @@ class Board {
     board = b;
   }
 
-  public void move_o(int i, int j) {
-    move(i, j, 'o');
+  public boolean move_o(int i, int j) {
+    return move(i, j, 'o');
   }
 
-  public void move_x(int i, int j) {
-    move(i, j, 'x');
+  public boolean move_x(int i, int j) {
+    return move(i, j, 'x');
   }
 
-  void move(int i, int j, char player) {
+  boolean move(int i, int j, char player) {
+    if ((i < 0 || i > 2) || (j < 0 || j > 2)) {
+      return false; // out of  bounds
+    }
+    if (board[i][j] != ' ') {
+      return false; // already taken
+    }
     board[i][j] = player;
+    return true;
   }
 
   public void print() {
