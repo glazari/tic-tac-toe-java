@@ -1,18 +1,15 @@
 class HelloWorld {
 
   public static void main(String[] args) {
-    char[][] board = new char[3][3];
+    char[][] board = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
     board[0][0] = 'x';
-    System.out.println(board[0][0] == 'x');
-    System.out.println(board[0][1] == ' ');
-    System.out.println(board[0][1] == ' ');
-    printBoard();
+    printBoard(board);
   }
 
-  public static void printBoard() {
+  public static void printBoard(char[][] board) {
     for (int i = 0; i < 3; i++) {
       for (int j = 0; j < 3; j++) {
-        System.out.print(" x ");
+        System.out.print(" " + board[i][j] + " ");
         if (j < 2) {
           System.out.print("|");
         } else {
