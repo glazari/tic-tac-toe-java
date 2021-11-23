@@ -1,4 +1,4 @@
 jpp:
-	@javac -d target -sourcepath src src/main.java
-	@java -cp target HelloWorld
+	@javac -d target -sourcepath src src/tictactoe.java
+	@java -cp target TicTacToe
 
