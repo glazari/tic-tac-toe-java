@@ -1,4 +1,4 @@
 jpp:
-	javac main.java
-	java HelloWorld this
+	@javac main.java
+	@java HelloWorld
 
