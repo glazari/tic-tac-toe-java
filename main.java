@@ -30,7 +30,7 @@ class Board {
   public Board() {
     char[][] b = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
     board = b;
-    board[0][0] = 'x';
+    board[0][0] = 'o';
   }
 
   public void print() {
