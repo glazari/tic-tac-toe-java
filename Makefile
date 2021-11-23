@@ -1,4 +1,4 @@
 jpp:
-	@javac -d target main.java
+	@javac -d target -sourcepath src src/main.java
 	@java -cp target HelloWorld
 
